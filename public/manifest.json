@@ -11,7 +11,8 @@
         "https://www.crunchyroll.com/*"
     ],
     "action": {
-        "default_icon": "default_icon.png"
+        "default_icon": "default_icon.png",
+        "default_popup": "index.html"
     },
     "background": {
         "service_worker": "background.js"
