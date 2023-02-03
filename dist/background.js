@@ -1,1 +1,0 @@
-(()=>{"use strict";const e=()=>{[...document.querySelectorAll(".erc-prev-next-episode h4 a, .erc-current-media-info h1")].map((e=>e.innerHTML="Title"))};chrome.webNavigation.onCompleted.addListener((({tabId:t})=>{chrome.scripting.executeScript({target:{tabId:t},func:e})}),{url:[{hostContains:"crunchyroll.com"}]})})();
