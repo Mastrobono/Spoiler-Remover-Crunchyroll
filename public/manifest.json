@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Crunchy Roll Spoiler Remover",
+    "description": "Removes spoiler from episodes titles",
+    "version": "1.0",
+    "permissions": [
+        "webNavigation",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://www.crunchyroll.com/*"
+    ],
+    "action": {
+        "default_icon": "default_icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+     }
+}
