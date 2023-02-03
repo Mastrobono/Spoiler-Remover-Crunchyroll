@@ -1,8 +1,9 @@
+
 const getElements = () => {
     const nextEpisodeSelector = '.erc-prev-next-episode h4 a';
     const currentEpisodeSelector = '.erc-current-media-info h1';
     const elements: Element[] | null = [...document.querySelectorAll(`${nextEpisodeSelector}, ${currentEpisodeSelector}`)];
-    return elements
+    return elements;
 }
 
 const removeSpoilers = () => {
@@ -17,7 +18,7 @@ const filter = {
     ],
 };
 
-chrome.webNavigation.onCompleted.addListener(({tabId} : {tabId: number}) => {
+chrome.webNavigation.onHistoryStateUpdated.addListener(({tabId} : {tabId: number}) => {
     chrome.scripting.executeScript({
         target: { tabId: tabId },
         func: removeSpoilers
