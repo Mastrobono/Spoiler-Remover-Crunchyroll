@@ -1,5 +1,7 @@
 const getElements = () => {
-    const elements: Element[] | null = [...document.querySelectorAll('.erc-prev-next-episode h4 a, .erc-current-media-info h1')];
+    const nextEpisodeSelector = '.erc-prev-next-episode h4 a';
+    const currentEpisodeSelector = '.erc-current-media-info h1';
+    const elements: Element[] | null = [...document.querySelectorAll(`${nextEpisodeSelector}, ${currentEpisodeSelector}`)];
     return elements
 }
 
