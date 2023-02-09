@@ -1,12 +1,17 @@
 import React from "react";
-import {render} from "react-dom"
+import { render } from "react-dom";
+import Header from "./components/Header";
+import Container from "./components/Container";
+import Platforms from "./components/Platforms";
+import "./input.css";
 
 const Popup = () => {
-    return (
-        <div>
-            <h1>Hello, World!</h1>
-        </div>
-    )
-}
+  return (
+    <Container>
+      <Header />
+      <Platforms/>
+    </Container>
+  );
+};
 
-render(<Popup/>, document.getElementById("react-target"));
+render(<Popup />, document.getElementById("react-target"));

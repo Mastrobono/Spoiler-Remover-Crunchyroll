@@ -1,0 +1,1 @@
+export type IPlatforms = "crunchyroll" | "netflix" | "animeflv";

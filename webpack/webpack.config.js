@@ -20,10 +20,15 @@ module.exports = {
             {
                 test: /\.(ts|js|tsx)$/,
                 loader: "babel-loader",
-                options:{
+                options: {
                     presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"]
                 },
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                include: path.resolve(__dirname, ".." , "src"),
+                use: ["style-loader", "css-loader", "postcss-loader"]
             },
         ],
     },
